@@ -1,13 +1,13 @@
 {% extends "_base.html" %}
 
 {% block title %}Home{% endblock title %}
+
 {% load static %}
 
 {% block content %}
-    <h1>Mano tengo fe!</h1>
     <img class="bookcover" src="{% static 'images/vinotinto.jpg' %}" alt="vinotinto">
-    
-    {% if user.is_authenticated %}
+    <h1>Mano tengo fe!</h1>
+    <!-- {% if user.is_authenticated %}
         <p>Epale {{ user.email }} :)</p>
         <form action="{% url 'logout' %}" method="post">
             {% csrf_token %}
@@ -17,6 +17,6 @@
         <p>No estas registrado</p>
         <a href="{% url 'login' %}">Log In</a>
         <a href="{% url 'signup' %}">Sign Up</a>
-    {% endif %}
+    {% endif %}     -->
 
 {% endblock content %}
