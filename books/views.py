@@ -19,3 +19,7 @@ class BookDetailView(LoginRequiredMixin, PermissionRequiredMixin, DetailView):
     template_name = 'books/book_detail.html'
     #login_url = "login"
     permission_required = "books.special_status"
+
+class SearchResultsListView(ListView):
+    model = Book
+    template_name = "books/search_results.html"
